@@ -46,7 +46,7 @@ if user_input := st.chat_input("Ketik pesan..."):
         final_prompt = f"PERAN KAMU: {personas[pilihan]}\n\nUSER BERTANYA: {user_input}"
         
         # Kita pakai model 1.5 Flash. Jika gagal, kode akan otomatis lapor.
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-pro")
         
         # Matikan stream=True biar tidak ribet
         response = model.generate_content(final_prompt)
