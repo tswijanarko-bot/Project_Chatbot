@@ -56,7 +56,7 @@ if not api_key:
 
 # 2. Konfigurasi Model dengan Persona yang dipilih
 model = genai.GenerativeModel(
-    model_name="gemini-pro",       <-- MODEL LEBIH STABIL
+    model_name="gemini-1.5-flash",       <-- MODEL LEBIH STABIL
     system_instruction=personas[selected_persona] 
 )
 # Kita pasang 'System Instruction' langsung ke model
