@@ -56,8 +56,9 @@ if not api_key:
 
 # 2. Konfigurasi Model dengan Persona yang dipilih
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",      
+    model_name="gemini-1.5-flash",
     system_instruction=personas[selected_persona] 
+)    
 )
 # Kita pasang 'System Instruction' langsung ke model
 # Ini yang membuat AI 'kerasukan' karakter yang kita mau
