@@ -55,8 +55,10 @@ if not api_key:
     st.stop()
 
 # 2. Konfigurasi Model dengan Persona yang dipilih
-genai.configure(api_key=api_key)
-
+model = genai.GenerativeModel(
+    model_name="gemini-pro",       <-- MODEL LEBIH STABIL
+    system_instruction=personas[selected_persona] 
+)
 # Kita pasang 'System Instruction' langsung ke model
 # Ini yang membuat AI 'kerasukan' karakter yang kita mau
 model = genai.GenerativeModel(
