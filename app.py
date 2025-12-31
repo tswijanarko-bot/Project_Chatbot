@@ -59,7 +59,6 @@ model = genai.GenerativeModel(
     model_name="gemini-1.5-flash",
     system_instruction=personas[selected_persona] 
 )    
-)
 # Kita pasang 'System Instruction' langsung ke model
 # Ini yang membuat AI 'kerasukan' karakter yang kita mau
 model = genai.GenerativeModel(
